@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, serif;
+    font-size: 18px;
+    line-height: 2;
+
+    background-color: #808000;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0 0 5px;
+}
+
+
+/* acord */
+
+.acord {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.acord-item {
+    margin-bottom: 5px;
+
+    border: 1px solid #b91125;
+}
+
+.acord-title {
+    display: block;
+    padding: 10px 15px;
+    position: relative;
+
+    color: #fff;
+    cursor: pointer;
+
+    transition: background .2s ease-out;
+}
+
+.acord-title:after {
+    content: "";
+    display: block;
+
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #fff transparent transparent transparent;
+
+    position: absolute;
+    top: 50%;
+    right: 15px;
+
+    transform: translateY(-50%);
+}
+
+.acord-title:hover {
+    background-color: #b91125;
+
+}
+
+.acord-input {
+    width: 0;
+    height: 0;
+
+    -webkit-appearance: none;
+    appearance: none;
+
+    position: absolute;
+}
+
+.acordinput:checked ~ .acord-title {
+    background-color: #b91125;
+}
+
+.acord-input:checked ~ .acord-title:after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #fff transparent;
+}
+
+.acord-input:checked ~ .acord-text {
+    display: block;
+}
+
+.acord-text {
+    display: none;
+    padding: 10px 15px;
+
+    color: #fff;
+    font-size: 14px;
+}
+
+
+
